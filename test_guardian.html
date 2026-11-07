@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Guardian</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "/assets/three/three.module.js",
+            "three/addons/": "/assets/three/"
+        }
+    }
+    </script>
+</head>
+<body style="margin:0; background:#000; overflow:hidden;">
+    <div id="canvas-container" style="width:100vw; height:100vh;"></div>
+    <script type="module">
+        import * as THREE from 'three';
+        import { EffectComposer } from 'three/addons/EffectComposer.js';
+        import { RenderPass } from 'three/addons/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/UnrealBloomPass.js';
+
+        console.log("THREE version:", THREE.REVISION);
+        console.log("EffectComposer loaded:", typeof EffectComposer);
+        console.log("RenderPass loaded:", typeof RenderPass);
+        console.log("UnrealBloomPass loaded:", typeof UnrealBloomPass);
+    </script>
+</body>
+</html>
